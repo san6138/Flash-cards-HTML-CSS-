@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    background: black no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#title {
+    font-size: 5vmin;
+    text-align: center;
+    font-family: "Copperplate, cursive";
+    color: yellowgreen;
+}
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+    height: 100vmin;
+    width: 100vmin;
+}
+.container {
+    width: 30%;
+    height: 30%;
+}
+.card {
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.country-front, .country-back {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 130%;
+    text-align: center;
+
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+}
+
+.country-front {
+    color: rgb(255,140,43);
+    background-color: rgb(249,239,228);
+    z-index: 2;
+    backface-visibility: hidden;
+}
+
+.country-back {
+    color: rgb(249,239,228);
+    background-color: rgb(255,140,43);
+    transform: rotateY(180deg);
+    z-index: 1;
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
